@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        function computerPlay(plays) {
+            return plays[Math.floor(Math.random()*plays.length)];
+        }
+        
+        const plays = ["piedra", "papel", "tijera"];
+        const playerChoice = prompt("¿Piedra, papel o tijera?");
+        const playerSelection = playerChoice.toLowerCase();
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection === computerSelection) {
+                alert("Empate!");
+            } else if (playerSelection === "piedra" && computerSelection === "tijera") {
+                alert("Ganaste! piedra le gana a tijera")
+            } else if (playerSelection === "tijera" && computerSelection === "papel") {
+                alert("Ganaste! tijera le gana a papel")
+            } else if (playerSelection === "papel" && computerSelection === "piedra") {
+                alert("Ganaste! papel le gana a piedra")
+            } else if (playerSelection === "tijera" && computerSelection === "piedra") {
+                alert("Perdiste! piedra le gana a tijera")
+            } else if (playerSelection === "papel" && computerSelection === "tijera") {
+                alert("Perdiste! tijera le gana a papel")
+            } else if (playerSelection === "piedra" && computerSelection === "papel") {
+                alert("Perdiste! papel le gana a piedra")
+            }
+            }
+
+const computerSelection = computerPlay(plays);
+console.log(playRound(playerSelection, computerSelection));
+
+        
+</script>
+</body>
+</html>
