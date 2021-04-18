@@ -1,5 +1,7 @@
 let winsPlayer = '';
 let winsComputer = '';
+const arrow = document.querySelector('#arrow');
+arrow.style.visibility = 'hidden'; 
 
 
 function computerPlay() {
@@ -54,13 +56,14 @@ function playRound(playerSelection, computerSelection) {
         cwins.textContent = "Rondas ganadas por la compu: " + winsComputer;
         resultRound.textContent = "Perdiste la ronda!";
         jugadorPlay.textContent = "Elegiste: " + playerSelection;
-        compuPlay.textContent = "La compu eligio: " + computerSelection;              
+        compuPlay.textContent = "La compu eligio: " + computerSelection;             
     }
     if (winsPlayer === 5 ) {
         resultRound.textContent = ("Ganaste!!");
         botonPapel.style.visibility = 'hidden'; 
         botonPiedra.style.visibility = 'hidden'; 
-        botonTijera.style.visibility = 'hidden'; 
+        botonTijera.style.visibility = 'hidden';
+        arrow.style.visibility = 'visible'; 
         document.getElementById("papel").disabled = true;
         document.getElementById("piedra").disabled = true;
         document.getElementById("tijera").disabled = true;
@@ -69,6 +72,7 @@ function playRound(playerSelection, computerSelection) {
         botonPapel.style.visibility = 'hidden'; 
         botonPiedra.style.visibility = 'hidden'; 
         botonTijera.style.visibility = 'hidden'; 
+        arrow.style.visibility = 'visible'; 
         document.getElementById("papel").disabled = true;
         document.getElementById("piedra").disabled = true;
         document.getElementById("tijera").disabled = true;
@@ -77,6 +81,7 @@ function playRound(playerSelection, computerSelection) {
 function startNewGame() {
     winsPlayer = 0;
     winsComputer = 0;
+    arrow.style.visibility = 'hidden'; 
     pwins.textContent = "Rondas ganadas: 0";
     cwins.textContent = "Rondas ganadas por la compu: 0";
     document.getElementById("papel").disabled = false;
@@ -86,8 +91,8 @@ function startNewGame() {
     botonPiedra.style.visibility = 'visible'; 
     botonTijera.style.visibility = 'visible'; 
     resultRound.textContent = "¿Piedra, papel o tijera?";  
-    jugadorPlay.textContent = "";
-    compuPlay.textContent = ""; 
+    jugadorPlay.textContent = "Elegiste:";
+    compuPlay.textContent = "La compu eligio:";  
 }
 
 

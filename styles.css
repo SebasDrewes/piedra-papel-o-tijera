@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 100%;
+    height: auto;
 }
 #resultRound {
     width: 100%;
@@ -70,6 +72,7 @@
 }
 
 #reset {
+    width:100%;
     border: none;
     font-family: inherit;
     background-color:#D0D1D3;
@@ -95,16 +98,16 @@
 .col-12 {width: 100%;}
 
 [class*="col-"] {
-    float: left;
-    padding: 2px;
-    border: 1px solid red;
-  }
+float: left;
+padding: 2px;
+border: 1px solid #e9e8e8;
+}
 
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
 
 #jugadorPlay {
     width: 100%;
@@ -116,5 +119,18 @@
     width: 100%;
     height: auto;
     font-size: 200%;
+}
+#arrow {
+    width:25%;
+    height:auto;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color:#D0D1D3;
+    border: none;
+    border-radius: 10px;
+}
 
+#bottom {
+position: relative;
+top: 50px;
 }
