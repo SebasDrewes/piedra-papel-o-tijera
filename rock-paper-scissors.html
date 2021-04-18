@@ -2,70 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>¿Piedra, papel o tijera?</title>
 </head>
-<body>
-    <script>
-        const plays = ["piedra", "papel", "tijera"];
-        const playerChoice = "";
-        const playerPlay = "";
-        const computerPlay = "";
-        const computerSeleciton = "";
-        let winsPlayer = 0;
-        let winsComputer = 0;
-        function playRound(playerPlay, computerPlay) {
-        playerPlay = prompt("¿Piedra, papel o tijera?").toLowerCase();
-        computerPlay = plays[Math.floor(Math.random()*plays.length)];
-            
-            if (playerPlay === computerPlay) {
-                console.log("Empataste la ronda!");
-            } else if (playerPlay === "piedra" && computerPlay === "tijera") {
-                console.log("Ganaste la ronda! Piedra le gana a tijera");
-                winsPlayer = winsPlayer + 1;
-                winsComputer = winsComputer - 1;
-            } else if (playerPlay === "tijera" && computerPlay === "papel") {
-                console.log("Ganaste la ronda! Tijera le gana a papel");
-                winsPlayer = winsPlayer + 1;
-                winsComputer = winsComputer - 1;
-            } else if (playerPlay === "papel" && computerPlay === "piedra") {
-                console.log("Ganaste la ronda! Papel le gana a piedra");
-                winsPlayer = winsPlayer + 1;
-                winsComputer = winsComputer - 1;
-            } else if (playerPlay === "tijera" && computerPlay === "piedra") {
-                console.log("Perdiste la ronda! Piedra le gana a tijera");
-                winsPlayer = winsPlayer - 1;
-                winsComputer = winsComputer + 1;
-            } else if (playerPlay === "papel" && computerPlay === "tijera") {
-                console.log("Perdiste la ronda! Tijera le gana a papel");
-                winsPlayer = winsPlayer - 1;
-                winsComputer = winsComputer + 1;
-            } else if (playerPlay === "piedra" && computerPlay === "papel") {
-                console.log("Perdiste la ronda! Papel le gana a piedra");                
-                winsPlayer = winsPlayer - 1;
-                winsComputer = winsComputer + 1;
-            }
-            }
-
-            function winner() {
-                if (winsPlayer >= 3) {
-                    console.log("Ganaste!!");
-                    alert("Ganaste!!");
-                } else if (winsPlayer === winsComputer) {
-                    console.log("Empate!");
-                    alert("Empate!");
-                } else {
-                    console.log("Perdiste!");
-                    alert("Perdiste!");
-                }
-            }
-console.log(playRound(playerPlay, computerPlay));
-console.log(playRound(playerPlay, computerPlay));
-console.log(playRound(playerPlay, computerPlay));
-console.log(playRound(playerPlay, computerPlay));
-console.log(playRound(playerPlay, computerPlay));
-console.log(winner());
-
-        
-</script>
+<body id="body">
+<div id="container">
+    <input type="image" id="papel" src="img/papel.jpg" alt="Papel"/>
+    <input type="image" id="piedra" src="img/piedra.jpg"  alt="Piedra"/>
+    <input type="image" id="tijera" src="img/tijera.jpg" alt="Tijera"/>
+    <button id="reset">Nuevo Juego</button>
+</div>
+<div id="results">
+    <p>Player wins</p><p id= "pwins">0</p>
+    <p>Computer wins</p><p id= "cwins">0</p>
+    <p id="resultRound">¿Piedra, papel o tijera?</p>
+</div>
+<script src="rock-paper-scissors.js"></script>
 </body>
 </html>

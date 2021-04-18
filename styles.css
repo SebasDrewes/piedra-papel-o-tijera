@@ -1,0 +1,88 @@
+#body {
+    background-color:#e9e8e8;
+    font-family:monospace;
+}
+
+#papel {
+    width:90px;
+    height:90px;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color:#D0D1D3;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px #999;
+  }
+  
+#papel:active {
+    background-color:#D0D1D3;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+  }
+
+#piedra {
+    width:90px;
+    height:90px;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color:#D0D1D3;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px #999;
+}
+  
+#piedra:active {
+    background-color:#D0D1D3;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+#tijera {
+    width:90px;
+    height:90px;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color:#D0D1D3;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px #999;
+}
+  
+#tijera:active {
+    background-color:#D0D1D3;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+#papel {
+    width:90px;
+    height:90px;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color:#D0D1D3;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px #999;
+  }
+  
+#papel:active {
+    background-color:#D0D1D3;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+  }
+
+#reset {
+    border: none;
+    font-family: inherit;
+    background-color:#D0D1D3;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+#reset:hover {background:#bcbdbe}
