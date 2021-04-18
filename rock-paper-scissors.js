@@ -11,33 +11,49 @@ function playRound(playerSelection, computerSelection) {
     const pwins = document.querySelector("#pwins");
     const cwins = document.querySelector("#cwins");
     const resultRound = document.querySelector("#resultRound");
+    const jugadorPlay = document.querySelector("#jugadorPlay");
+    const compuPlay = document.querySelector("#compuPlay");
 
     if (playerSelection === computerSelection) {
         resultRound.textContent = "Empataste la ronda!";
+        jugadorPlay.textContent = "Elegiste: " + playerSelection;
+        compuPlay.textContent = "La compu eligio: " + computerSelection;
     } else if (playerSelection === "piedra" && computerSelection === "tijera") {
         ++winsPlayer
         pwins.textContent = winsPlayer
-        resultRound.textContent = "Ganaste la ronda! Piedra le gana a tijera";
+        resultRound.textContent = "Ganaste la ronda!";
+        jugadorPlay.textContent = "Elegiste: " + playerSelection;
+        compuPlay.textContent = "La compu eligio: " + computerSelection;
     } else if (playerSelection === "tijera" && computerSelection === "papel") {
         ++winsPlayer
         pwins.textContent = winsPlayer
-        resultRound.textContent = "Ganaste la ronda! Tijera le gana a papel";
+        resultRound.textContent = "Ganaste la ronda!";
+        jugadorPlay.textContent = "Elegiste: " + playerSelection;
+        compuPlay.textContent = "La compu eligio: " + computerSelection;
     } else if (playerSelection === "papel" && computerSelection === "piedra") {
         ++winsPlayer
         pwins.textContent = winsPlayer
-        resultRound.textContent = "Ganaste la ronda! Papel le gana a piedra";
+        resultRound.textContent = "Ganaste la ronda!";
+        jugadorPlay.textContent = "Elegiste: " + playerSelection;
+        compuPlay.textContent = "La compu eligio: " + computerSelection;
     } else if (playerSelection === "tijera" && computerSelection === "piedra") {
         ++winsComputer
         cwins.textContent = winsComputer
-        resultRound.textContent = "Perdiste la ronda! Piedra le gana a tijera";
+        resultRound.textContent = "Perdiste la ronda!";
+        jugadorPlay.textContent = "Elegiste: " + playerSelection;
+        compuPlay.textContent = "La compu eligio: " + computerSelection;
     } else if (playerSelection === "papel" && computerSelection === "tijera") {
         ++winsComputer
         cwins.textContent = winsComputer
-        resultRound.textContent = "Perdiste la ronda! Tijera le gana a papel";
+        resultRound.textContent = "Perdiste la ronda!";
+        jugadorPlay.textContent = "Elegiste: " + playerSelection;
+        compuPlay.textContent = "La compu eligio: " + computerSelection;
     } else if (playerSelection === "piedra" && computerSelection === "papel") {
         ++winsComputer
         cwins.textContent = winsComputer
-        resultRound.textContent = "Perdiste la ronda! Papel le gana a piedra";                
+        resultRound.textContent = "Perdiste la ronda!";
+        jugadorPlay.textContent = "Elegiste: " + playerSelection;
+        compuPlay.textContent = "La compu eligio: " + computerSelection;              
     }
     if (winsPlayer === 5 ) {
         resultRound.textContent = ("Ganaste!!")
@@ -59,7 +75,9 @@ function startNewGame() {
     document.getElementById("papel").disabled = false;
     document.getElementById("piedra").disabled = false;
     document.getElementById("tijera").disabled = false;
-    resultRound.textContent = "¿Piedra, papel o tijera?";
+    resultRound.textContent = "¿Piedra, papel o tijera?";  
+    jugadorPlay.textContent = "";
+    compuPlay.textContent = ""; 
 }
 
 

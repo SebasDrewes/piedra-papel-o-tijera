@@ -2,6 +2,11 @@
     background-color:#e9e8e8;
     font-family:monospace;
 }
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 #papel {
     width:90px;
