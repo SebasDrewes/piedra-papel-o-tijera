@@ -3,8 +3,6 @@
 
 Javascript piedra, papel o tijera contra la pc.
 
-Realizado segun lo requerido en el curso: https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors
-
 Usando AddEventListeners y manejo de DOM, manteniendo un diseño responsive.
 
 Probalo! https://sebasdrewes.github.io/piedra-papel-o-tijera/
